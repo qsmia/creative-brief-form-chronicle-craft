@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Brief Form - ChronicleChraft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>ChronicleChraft</h1>
+                <p>Creative Solutions</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="form-header">
+                <h2>Creative Brief Form</h2>
+                <p>Please fill out this form with as much detail as possible. The more information you provide, the better we can tailor the project to meet your vision and goals.</p>
+            </div>
+
+            <form id="creativeBriefForm" class="creative-form" action="/submit" method="POST">
+                <!-- Client Information Section -->
+                <section class="form-section">
+                    <h3>Client Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="companyName">Company/Organization Name</label>
+                            <input type="text" id="companyName" name="companyName">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title/Role</label>
+                            <input type="text" id="jobTitle" name="jobTitle">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website / Social Media Handles</label>
+                            <input type="text" id="website" name="website">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Project Overview Section -->
+                <section class="form-section">
+                    <h3>Project Overview</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="projectTitle">Project Title / Name *</label>
+                            <input type="text" id="projectTitle" name="projectTitle" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="projectType">Type of Project *</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Select project type...</option>
+                                <option value="Branding">Branding</option>
+                                <option value="Website">Website</option>
+                                <option value="Video">Video</option>
+                                <option value="Campaign">Campaign</option>
+                                <option value="Logo Design">Logo Design</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Print Design">Print Design</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="projectDescription">Brief Description of the Project *</label>
+                            <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="keyObjectives">Key Objectives / Goals *</label>
+                            <textarea id="keyObjectives" name="keyObjectives" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="targetAudience">Target Audience (demographics, interests, behavior) *</label>
+                            <textarea id="targetAudience" name="targetAudience" rows="3" required></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Creative Direction Section -->
+                <section class="form-section">
+                    <h3>Creative Direction</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="preferredStyle">Preferred Style / Tone</label>
+                            <input type="text" id="preferredStyle" name="preferredStyle" placeholder="e.g., Modern, Minimal, Bold, Corporate, Playful">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="designElements">Colors, Fonts, or Design Elements to Use</label>
+                            <textarea id="designElements" name="designElements" rows="3"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="avoidElements">Colors, Fonts, or Design Elements to Avoid</label>
+                            <textarea id="avoidElements" name="avoidElements" rows="3"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="inspirations">Inspirations / References (links or descriptions)</label>
+                            <textarea id="inspirations" name="inspirations" rows="3"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Content & Deliverables Section -->
+                <section class="form-section">
+                    <h3>Content & Deliverables</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="mainMessage">Main Message / Core Idea to Communicate *</label>
+                            <textarea id="mainMessage" name="mainMessage" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="contentProvided">Content Provided by Client (logos, images, copy, etc.)</label>
+                            <textarea id="contentProvided" name="contentProvided" rows="3"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="deliverables">Final Deliverables Expected *</label>
+                            <textarea id="deliverables" name="deliverables" rows="3" required placeholder="e.g., Website, Logo, Social Media Posts, Brochure, Video"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="fileFormats">File Formats Required</label>
+                            <input type="text" id="fileFormats" name="fileFormats" placeholder="e.g., JPG, PNG, PDF, MP4">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Timeline & Budget Section -->
+                <section class="form-section">
+                    <h3>Timeline & Budget</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="startDate">Ideal Project Start Date</label>
+                            <input type="date" id="startDate" name="startDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline">Ideal Project Completion Date / Deadline</label>
+                            <input type="date" id="deadline" name="deadline">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range...</option>
+                                <option value="Under $1,000">Under $1,000</option>
+                                <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                                <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                                <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+                                <option value="$25,000+">$25,000+</option>
+                                <option value="To be discussed">To be discussed</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Approval & Contact Section -->
+                <section class="form-section">
+                    <h3>Approval & Contact</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="primaryContact">Primary Contact Person</label>
+                            <input type="text" id="primaryContact" name="primaryContact">
+                        </div>
+                        <div class="form-group">
+                            <label for="communicationMethod">Preferred Method of Communication</label>
+                            <select id="communicationMethod" name="communicationMethod">
+                                <option value="">Select method...</option>
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="Slack">Slack</option>
+                                <option value="Teams">Teams</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="secondaryContact">Secondary Contact (if any)</label>
+                            <input type="text" id="secondaryContact" name="secondaryContact">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Additional Notes Section -->
+                <section class="form-section">
+                    <h3>Additional Notes</h3>
+                    <div class="form-group full-width">
+                        <label for="additionalNotes">Please share any extra details, expectations, or important points we should consider:</label>
+                        <textarea id="additionalNotes" name="additionalNotes" rows="5"></textarea>
+                    </div>
+                </section>
+
+                <!-- Acknowledgement Section -->
+                <section class="form-section">
+                    <h3>Acknowledgement</h3>
+                    <div class="form-group full-width">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="acknowledgement" name="acknowledgement" required>
+                            <label for="acknowledgement">I confirm that the information provided is accurate to the best of my knowledge and will be used to guide the project. *</label>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Creative Brief</button>
+                </div>
+            </form>
+
+            <div class="disclaimer">
+                <h4>Disclaimer</h4>
+                <p>All information collected in this Creative Brief Form is strictly confidential and will only be used for project-related purposes. By submitting this form, you acknowledge that project timelines, costs, and outcomes may vary based on the information provided and mutual agreement. Final deliverables are subject to revisions as per the agreed scope of work.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 ChronicleChraft. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
