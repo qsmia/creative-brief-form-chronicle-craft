@@ -41,8 +41,7 @@ jobs:
         
     - name: Test with pytest
       run: |
-        # Run pytest with verbose output and create coverage report
-        python -m pytest -v --tb=short
+        pytest
         
     - name: Test Flask app can start
       run: |
