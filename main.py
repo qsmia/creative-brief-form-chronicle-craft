@@ -145,7 +145,8 @@ def submit_form():
         project_fields = ['projectTitle', 'projectType', 'projectDescription', 'keyObjectives', 'targetAudience']
         for field in project_fields:
             if form_data[field]:
-                value = form_data[field].replace('\n', '<br>')
+                newline_to_br = '\n'
+                value = form_data[field].replace(newline_to_br, '<br>')
                 email_body += f"""
                     <div class='field'>
                         <div class='field-label'>{all_fields[field]}:</div>
@@ -168,7 +169,8 @@ def submit_form():
             
             for field in fields:
                 if form_data[field]:
-                    value = form_data[field].replace('\n', '<br>')
+                    newline_to_br = '\n'
+                    value = form_data[field].replace(newline_to_br, '<br>')
                     email_body += f"""
                         <div class='field'>
                             <div class='field-label'>{all_fields[field]}:</div>
@@ -182,7 +184,7 @@ def submit_form():
                 <div class='section'>
                     <h3>Additional Notes</h3>
                     <div class='field'>
-                        <div class='field-value'>{form_data['additionalNotes'].replace('\n', '<br>')}</div>
+                        <div class='field-value'>{form_data['additionalNotes'].replace(chr(10), '<br>')}</div>
                     </div>"""
         
         # Close email body
