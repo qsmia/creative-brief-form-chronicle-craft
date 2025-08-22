@@ -192,11 +192,12 @@ def create_admin_email_body(form_data):
     
     # Add additional notes if present
     if form_data.get('additionalNotes'):
+        additional_notes = form_data['additionalNotes'].replace('\n', '<br>')
         email_body += f"""
             <div class='section'>
                 <h3>Additional Notes</h3>
                 <div class='field'>
-                    <div class='field-value priority'>{form_data['additionalNotes'].replace('\n', '<br>')}</div>
+                    <div class='field-value priority'>{additional_notes}</div>
                 </div>
             </div>
         """
